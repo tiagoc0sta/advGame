@@ -1,4 +1,4 @@
-package main
+/*package main
 
 import (
 	"fmt"
@@ -86,4 +86,4 @@ func showMenu() {
 
 	fmt.Printf("Your fantansy is %s and your superpower is %s' .\n", choice1, choice2)
 }
-
+*/
