@@ -78,5 +78,4 @@ func startGame() {
 	choice2 := superPowers[seed%int64(len(superPowers))]
 
 	fmt.Printf("Your fantansy is %s and your superpower is %s.\n", choice1, choice2)
-}
-
+}*/

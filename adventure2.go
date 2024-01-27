@@ -58,14 +58,18 @@ func startGame() {
     var scorePlayer2 int
     fantasyLocations := []string{"Old Castle in the Mountains", "Elf's Hidden Realm", "Atlantis", "Asgard"}
     superPowers := []string{"Flying", "Invisibility", "Teleportation", "Time Manipulation"}
-    //Using current time as a seed
+    
+		//Using current time as a seed
     seed1 := time.Now().UnixNano()
-    //User input - Player 1
+    
+		//User input - Player 1
     fmt.Println("Player 1: Please choose a number to start the game:")
     fmt.Scan(&inputPlayer1)
-    //Modifying the seed with user input
+    
+		//Modifying the seed with user input
     seed1 = (seed1 + int64(inputPlayer1)) % 100
-    //Selecting the strings based on modified seed
+    
+		//Selecting the strings based on modified seed
     superPowerPlayer1 := superPowers[seed1%int64(len(superPowers))]
     fmt.Printf("Player 1 superpower is %s' .\n", superPowerPlayer1)
     //Using current time as a seed
@@ -73,19 +77,23 @@ func startGame() {
     //User input - Player 2
     fmt.Println("Player 2: Please choose a number to start the game:")
     fmt.Scan(&inputPlayer2)
-    //Modifying the seed with user input
+    
+		//Modifying the seed with user input
     seed2 = (seed2 + int64(inputPlayer2)) % 100
-    //Selecting the strings based on modified seed
+    
+		//Selecting the strings based on modified seed
     superPowerPlayer2 := superPowers[seed2%int64(len(superPowers))]
     fmt.Printf("Player 2 is %s' .\n", superPowerPlayer2)
-    //Fantasy Location Randonly selected
+    
+		//Fantasy Location Randonly selected
     //Using current time as a seed
     seed := time.Now().UnixNano()
     seedSum := int64(inputPlayer1) + int64(inputPlayer2)
     seed = (seed + int64(seedSum)) % 100
     fantasyLocation := fantasyLocations[seed%int64(len(fantasyLocations))]
     fmt.Printf("Fantasy Location choosen is %s' .\n", fantasyLocation)
-    //score of player1 based in the random selection of fantasy location and superpower.
+    
+		//score of player1 based in the random selection of fantasy location and superpower.
     //In each location the superpowers has differents scores
     if fantasyLocation == "Old Castle in the Mountains" {
         if superPowerPlayer1 == "Flying" {
@@ -130,7 +138,8 @@ func startGame() {
             scorePlayer1 = 1
         }
     }
-    //score of player2 based in the random selection of fantasy location and superpower.
+    
+		//score of player2 based in the random selection of fantasy location and superpower.
     //In each location the superpowers has differents scores
     if fantasyLocation == "Old Castle in the Mountains" {
         if superPowerPlayer2 == "Flying" {
